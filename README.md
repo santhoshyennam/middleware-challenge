@@ -69,3 +69,13 @@ or to modify the parameters by which it runs.
 You will also be given a docker-compose.yml file that will start a single instance of the `file-server` application. You will need 
 to update this file to add your middleware. You may modify this file however you like, but beware, you **must ensure your 
 aggregate system resources adhere to the limits defined above.**
+
+## application flow
+![My Image](application_flow.jpeg)
+
+
+## Before adding Middleware,redis,load balancer
+![My Image](before.png)
+
+## After adding Middleware,redis,load balancer
+![My Image](after.jpeg)
