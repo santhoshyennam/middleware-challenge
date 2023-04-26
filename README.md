@@ -72,6 +72,9 @@ to update this file to add your middleware. You may modify this file however you
 aggregate system resources adhere to the limits defined above.**
 
 # Task Results
+
+We have used 2 load balancers, 1 redis cache, 5 middlewares and 5 Fileservers. Firstly, The request from load tester will go to the load balancer. The load balancer forwards request to one of the middlewares. The middlewares will be connected to distributed cache (redis), where will store file content after every PUT request. So that, it will be easier in the GET call. After that,the request will be forwarded to another load balancer from middleware, then finally it forwards request to one of the file servers to handle the requests.
+The application flow is shown in the below diagram.
 ## application flow
 ![My Image](application_flow.jpeg)
 
